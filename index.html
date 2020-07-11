@@ -1,0 +1,181 @@
+<html>
+
+<head>
+	<title>Welcome!</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+
+<style type="text/css">
+	body{
+		margin :0px;
+		font-family: "roboto";
+	}
+
+	div.flex{
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	div.background{
+		background-image: url(https://images.unsplash.com/photo-1468233748640-b31327627610?ixlib=rb-1.2.1&auto=format&fit=crop&w=1932&q=80);
+		background-position: 50%;
+		background-size: cover;
+
+		/*filter: blur(8px);*/
+
+		width: 70%;
+		height: 100%;
+		margin: 0px;
+	}
+
+	div.signup-box{
+		/*position: absolute;*/
+		background-color: #ffffff;
+		width: 30%;
+		height: 75%;
+		margin: auto;
+ 		padding: 16px 48px;
+ 		/*padding-right: 32px;*/
+	}
+
+	div.header{
+		padding: 16px 0px;
+		width: 90%;
+	}
+
+	table.format{
+		/*border: 1px solid black;*/
+
+		width: 100%;
+		margin-top: 0px;
+		padding: 0px;
+
+	}
+
+	td{
+		/*margin: 10px 0px;*/
+		padding-left: 0px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		text-align: right;
+		/*width:0%;*/
+	}
+
+	.label{
+		font-family: "roboto";
+		font-size: 18px;
+		text-align: left;
+		/*width: 40%;*/
+	}
+
+	input[type = text],input[type = password], input[type = number]{
+		padding: 4px 4px 4px;
+		height: 32px;
+		width: 100%;
+		font-size: 16px;
+		font-weight: 300;
+
+		border: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+
+
+	div.button{
+		font-family: "roboto";
+		font-size: 14px;
+		font-weight: 600;
+		color: white;
+		width: 155px;
+		height: 35px;
+		margin-top: 32px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		background-color: #2e6baf;
+		text-align: center;
+		line-height: 34px;
+		position: relative;
+		overflow: inherit;
+		/*padding-top: 8px;*/
+	}
+
+	.h1{
+		font-size: 40px;
+		font-weight: 450;
+		margin: 16px 0px;
+		/*text-transform: uppercase;	*/
+	}
+
+	.h2{
+		font-family: "roboto";
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 16px;
+		font-weight: 500;
+		margin: 4px 0px;
+
+	}
+
+</style>
+
+<script>
+
+	function validation(){
+		pw1 = document.getElementById("pw1").value;
+		pw2 = document.getElementById("pw2").value;
+
+		if(pw1 != pw2)
+		{
+			alert("Passwords do not match!");
+		}
+
+		else
+		{
+			alert("Welcome");
+		}
+
+
+	}
+</script>
+
+<body>
+	<div class = "flex">
+		<div class = "background">
+		</div>
+
+		<div class = "signup-box">
+			<div class = "header">
+					<p class = "h1">Sign Up </p>
+					<p class = "h2">By having a Reddit account, you can join, vote, and comment on all your favorite Reddit content. </p>
+			</div>
+
+			<table class = "format">
+				<tr>
+					<td class = "label"> Name </td>
+					<td > <input type="text" name="full-name" spellcheck="false"> </td>
+				</tr>
+				<tr>
+					<td class = "label"> Age </td>
+					<td> <input type="number" name="age"> </td>
+				</tr>
+				<tr>
+					<td class = "label"> Gender </td>
+					<td> <p class = "label"> <input type="radio" name="gender" value = "male"> Male <input type="radio" name="gender" value = "female"> Female </p> </td>
+				</tr>
+				<tr>
+					<td class = "label"> Enter Password </td>
+					<td> <input type="Password" name="pword" id = "pw1"> </td>
+				</tr>
+				<tr>
+					<td class = "label"> Re-enter Password </td>
+					<td> <input type="Password" name="re-pword" id = "pw2"> </td>
+				</tr>
+			</table>
+
+			<div class = "button" onclick = "validation();"> SUBMIT </div>
+		</div>
+	</div>
+</body>
+
+</html>
