@@ -117,7 +117,6 @@
 		font-size: 16px;
 		font-weight: 500;
 		margin: 4px 0px;
-
 	}
 
 </style>
@@ -125,12 +124,10 @@
 <script>
 
 	function validation(){
-		pw1 = document.getElementById("pw1").value;
-		pw2 = document.getElementById("pw2").value;
 
-		if(pw1 != pw2)
+		if(pwrecheck() == false || agecheck() == false || namecheck() == false || pwcheck() == false)
 		{
-			alert("Passwords do not match!");
+			alert("Please complete the red marked fields");
 		}
 
 		else
@@ -139,6 +136,115 @@
 		}
 
 
+	}
+
+	function agecheck()
+	{
+		var age = document.getElementById("age").value;
+
+		// alert("yes");
+
+		if(age < 18)
+		{
+			document.getElementById("age").style.border="1.5px solid red";
+			document.getElementById("label-age").style.color="red";
+			document.getElementById("label-age").innerHTML = "Age*";
+			return false;
+
+		}
+
+		else
+		{
+			document.getElementById("age").style.border="1.5px solid #2e6baf";
+			// document.getElementById("age").style.border="1px solid #2e6baf";
+			document.getElementById("label-age").style.color="black";
+			document.getElementById("label-age").innerHTML = "Age";
+			return true;
+		}
+	}
+
+
+	function namecheck(){
+		var name = document.getElementById("full-name").value;
+
+
+		if(name.length == 0)
+		{
+
+			document.getElementById("full-name").style.border="1.5px solid red";
+			document.getElementById("label-name").style.color="red";
+			document.getElementById("label-name").innerHTML = "Name*";
+			document.getElementById("label-name").title="Name can't be empty";
+			return false;
+		}
+
+		else
+		{
+			// alert("yes");
+			document.getElementById("full-name").style.border="1.5px solid #2e6baf";
+			document.getElementById("label-name").style.color="black";
+			document.getElementById("label-name").innerHTML = "Name";
+			return true;
+		}
+	}
+
+
+	function pwcheck()
+	{
+		var pw = document.getElementById("pw1").value;
+
+		var n = pw.length;
+
+		if(n < 8)
+		{
+
+			document.getElementById("pw1").style.border="1.5px solid red";
+			document.getElementById("label-pw").style.color="red";
+			document.getElementById("label-pw").innerHTML = "Enter Password*";
+			document.getElementById("label-pw").title="Password must be atleast 8 characters";	
+			return false;
+		}
+
+		else
+		{
+			// alert("yes");
+			document.getElementById("pw1").style.border="1.5px solid #2e6baf";
+			document.getElementById("label-pw").style.color="black";
+			document.getElementById("label-pw").innerHTML = "Enter Password";
+			return true;
+		}
+	}
+
+
+
+
+	function pwrecheck()
+	{
+		var pw1 = document.getElementById("pw1").value;
+		var pw2 = document.getElementById("pw2").value;
+
+
+		if(pw1 != pw2)
+		{
+
+			document.getElementById("pw2").style.border="1.5px solid red";
+			document.getElementById("label-pw2").style.color="red";
+			document.getElementById("label-pw2").innerHTML = "Re-enter Password*";
+			document.getElementById("label-pw2").title="Re-entered password do not match";
+
+			return false;
+		}
+
+		else
+		{
+			// alert("yes");
+			document.getElementById("pw2").style.border="1.5px solid #2e6baf";
+			document.getElementById("label-pw2").style.color="black";
+			document.getElementById("label-pw2").innerHTML = "Re-enetr Password";
+			document.getElementById("label-pw2").title="Re-entered password";
+
+			return true;
+		}
 	}
 </script>
 
@@ -155,24 +261,24 @@
 
 			<table class = "format">
 				<tr>
-					<td class = "label"> Name </td>
-					<td > <input type="text" name="full-name" spellcheck="false"> </td>
+					<td class = "label" id = "label-name"> Name </td>
+					<td > <input type="text" name="full-name" id = "full-name" spellcheck="false" onblur="namecheck();"> </td>
 				</tr>
 				<tr>
-					<td class = "label"> Age </td>
-					<td> <input type="number" name="age"> </td>
+					<td class = "label" id = "label-age" title = "Must be over 18"> Age </td>
+					<td> <input type="number" name="age" onblur="agecheck();" id = "age"> </td>
 				</tr>
 				<tr>
 					<td class = "label"> Gender </td>
-					<td> <p class = "label"> <input type="radio" name="gender" value = "male"> Male <input type="radio" name="gender" value = "female"> Female </p> </td>
+					<td> <p class = "label"> <input type="radio" name="gender" value = "male" checked=""> Male <input type="radio" name="gender" value = "female"> Female </p> </td>
 				</tr>
 				<tr>
-					<td class = "label"> Enter Password </td>
-					<td> <input type="Password" name="pword" id = "pw1"> </td>
+					<td class = "label" id = "label-pw"> Enter Password </td>
+					<td> <input type="Password" name="pword" id = "pw1" onblur = "pwcheck();"> </td>
 				</tr>
 				<tr>
-					<td class = "label"> Re-enter Password </td>
-					<td> <input type="Password" name="re-pword" id = "pw2"> </td>
+					<td class = "label" id = "label-pw2"> Re-enter Password </td>
+					<td> <input type="Password" name="re-pword" id = "pw2" onblur = "pwrecheck(); "> </td>
 				</tr>
 			</table>
 
