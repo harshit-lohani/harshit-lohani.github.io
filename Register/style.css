@@ -8,9 +8,10 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(assets/images/background-1-blurred.jpg);
-    background-size: 100%;
+    background-size: auto;
     background-repeat: no-repeat;
 }
+
 
 .background{
     height: 100%;
@@ -33,18 +34,10 @@ body{
 }
 
 .box{
-/*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-*/
     height: 87%;
     width: 75%;
     display: flex;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-/*    border: 1px solid black;*/
 }
 
 .image-box{
@@ -56,11 +49,12 @@ body{
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+/*    flex-shrink: 3;*/
 }
 
 .signup-box{
 /*    height: 100%;*/
-    width: 55%;
+    width: 65%;
     background-color: white;
 /*    border: 1px solid red;*/
 /*    padding: 40px 64px;*/
@@ -125,7 +119,7 @@ body{
 }
 
 .input-container{
-    width: 46%;
+    width: 47%;
     padding: 8px 0px;
 }
 
@@ -247,3 +241,24 @@ a.href-signin{
     font-weight: 500;
     line-height: 14px;
 }
+
+
+
+@media screen and (max-width: 800px) {
+    .box{
+    width: 85%;
+    height: 90%;
+    }
+    .input-container{
+    width: 100%;    
+    }
+    .signup-box{
+        padding: 16px 16px;
+        width: auto;
+        overflow: scroll;
+    }
+    .image-box{
+        width: 0%;
+    }
+}
+
