@@ -99,9 +99,10 @@ function passwordValidation() {
         return false;
     }
     else
+    
     {
         document.getElementById("txt-password1").className = "input-valid";
-        return false;
+        return true;
     }
 }
 
@@ -132,7 +133,7 @@ function validateForm(){
     var positionValid = positionValidation();
     
     
-    if(emailValid || nameValid || passwordValid)
+    if(emailValid && nameValid && passwordValid && rePasswordValid && countryValid && phoneValid && positionValid)
     {
         alert("Welcome!");
         document.getElementById("anchorID").click();
