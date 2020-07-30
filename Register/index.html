@@ -3,11 +3,14 @@
         <title> Register With Us </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" type = "text/css" href = "style.css">
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
     </head>
     
     <body>
 
+        <a id="anchorID" href="https://www.facebook.com/" target="_blank"></a>
+        
+        
         <div class = "box-container">
             <div class = "box">
                 <div class = "image-box"></div>
@@ -19,11 +22,11 @@
                     <div class = "content-flex">
                         <div class = "input-container">
                             <label for "txt-full-name">Full Name</label>
-                            <input type = "text" class = "input" id = "txt-full-name" spellcheck="false" placeholder="Name">
+                            <input type = "text" class = "input" id = "txt-full-name" spellcheck="false" placeholder="Name" onblur = "nameValidation();">
                         </div>
                         <div class = "input-container">
-                            <label for "txt-full-name">Position</label>
-                            <select name = "position" class = "input" id = "select-position">
+                            <label for "txt-position">Position</label>
+                            <select name = "position" class = "input" id = "select-position" onblur = "positionValidation();">
                                 <option value = "select" disabled selected style>-Please Select-</option>
                                 <option value = "op1">Position 1</option>
                                 <option value = "op2">Position 2</option>
@@ -31,28 +34,28 @@
                             </select>
                         </div>
                         <div class = "input-container">
-                            <label for "txt-full-name" spellcheck="false">Email</label>
-                            <input type = "text" class = "input" id = "txt-email" placeholder="Email">
+                            <label for "txt-email" >Email</label>
+                            <input type = "text" class = "input" id = "txt-email" placeholder="Email"  spellcheck="false" onblur = "emailValidation();">
                         </div>
                         <div class = "input-container">
-                            <label for "txt-full-name">Phone Number</label>
-                            <input type = "text" class = "input" id = "txt-full-name" placeholder="Phone number">
+                            <label for "txt-phone">Phone Number</label>
+                            <input type = "text" class = "input" id = "txt-phone" placeholder="Phone number" onblur = "phoneValidation()";>
                         </div>
                         <div class = "input-container">
                             <label for "txt-country">Country</label>
-                            <input type = "text" class = "input" id = "txt-country" placeholder="Country">
+                            <input type = "text" class = "input" id = "txt-country" placeholder="Country" onblur = "countryValidation();">
                         </div>
                         <div class = "input-container">
-                            <label for "txt-city">City</label>
+                            <label for "txt-city">City <span style = "font-style: italic; font-size: 14px; font-weight : normal;">(optional)</span></label>
                             <input type = "text" class = "input" id = "txt-city" placeholder="City">
                         </div>
                         <div class = "input-container">
                             <label for "txt-password1">Enter password</label>
-                            <input type = "password" class = "input" id = "txt-password1" placeholder = "Enter Password">
+                            <input type = "password" class = "input" id = "txt-password1" placeholder = "Enter Password" onblur = "passwordValidation();">
                         </div>
                         <div class = "input-container">
                             <label for "txt-password2">Re-enter password</label>
-                            <input type = "password" class = "input" id = "txt-password2" placeholder="Re enter password">
+                            <input type = "password" class = "input" id = "txt-password2" placeholder="Re enter password" onblur = "rePasswordValidation();">
                         </div>
                         <div class = "input-container-radio">
                             <label for "input-gender">Gender</label>
