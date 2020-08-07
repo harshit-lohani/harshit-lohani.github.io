@@ -5,7 +5,7 @@ body{
     font-size: 12px;
     margin: 0px;
     overflow-x: hidden;
-    width: 100v2;
+    width: 100%;
 }
 
 .hero-container{
@@ -96,7 +96,7 @@ body{
     flex-flow: column wrap;
     justify-content: flex-start;
     align-content: center;
-    height: 800;
+    height: 650;
 }
 
 img{
