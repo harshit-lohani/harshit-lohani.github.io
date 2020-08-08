@@ -41,10 +41,13 @@ body{
 }
 
 .header-link{
-    padding: 0.5em 2em;
+    margin: 0.5em 3vw;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
+    line-height: 16px;
+    transition: font-size 0.5s;
+/*    width: 5vw;*/
 }
 
 .cta{
@@ -57,7 +60,6 @@ body{
     text-align: center;
     margin: 20vh auto;
     align-self: center;
-    magin
 }
     
 
@@ -76,18 +78,22 @@ body{
     text-transform: uppercase;
     width: 100%;
     font-size: 24px;
+    line-height: 24px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 2px;
-    margin: 0.5em 0;
+    padding: 8px 0px;
+/*    margin: 0.5em 0;*/
 }
 
 .sub-heading{
     font-size: 16px;
     font-weight: 500;
     width: 100%;
+    line-height: 16px;
     text-align: center;
-    margin: 0.25em 0;
+/*    margin: 0.25em 0;*/
+    padding: 4px 0px;
 }
 
 .image-flex{
@@ -115,9 +121,9 @@ img{
     font-weight: 400;
 /*    line-height: 20px;  */
     text-align: center;
-    width: 65vw;
-    padding: 10vh 0;
-    padding-bottom: 20vh;
+    width: 60vw;
+    padding: 10vh 1em;
+/*    padding-bottom: 20vh;*/
     margin: 0 auto;
 }
 
@@ -145,3 +151,19 @@ img{
   outline: solid #f00 1px !important;
 }
 */
+
+img:hover{
+    opacity: 50%;
+}
+
+.header-link:hover{
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .content{
+    width: 80vw;
+    }
+}
+
