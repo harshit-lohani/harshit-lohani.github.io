@@ -4,8 +4,8 @@ body{
     font-family: Lato, sans-serif;
     font-size: 12px;
     margin: 0px;
-    overflow-x: hidden;
-    width: 100%;
+/*    overflow-x: hidden;*/
+    width: 100v2;
 }
 
 .hero-container{
@@ -79,7 +79,7 @@ body{
     font-weight: 600;
     text-align: center;
     letter-spacing: 2px;
-    margin: 0.5em 0.5em;
+    margin: 0.5em 0;
 }
 
 .sub-heading{
@@ -87,7 +87,7 @@ body{
     font-weight: 500;
     width: 100%;
     text-align: center;
-    margin: 0.25em 0.5em;
+    margin: 0.25em 0;
 }
 
 .image-flex{
@@ -97,6 +97,7 @@ body{
     justify-content: flex-start;
     align-content: center;
     height: 650;
+    overflow-x: hidden;
 }
 
 img{
@@ -105,17 +106,19 @@ img{
 
 .about-us{
     background-color: #F0F6F6;
-    height: 85vh;
+/*    height: 85vh;*/
 }
 
 .content{
     color: rgb(80, 80, 80);
     font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;  
-/*    text-align: center;*/
-    width: 70vw;
-    margin: 7vh auto;
+    font-weight: 400;
+/*    line-height: 20px;  */
+    text-align: center;
+    width: 65vw;
+    padding: 10vh 0;
+    padding-bottom: 20vh;
+    margin: 0 auto;
 }
 
 .sub-heading2{
@@ -123,7 +126,7 @@ img{
     font-weight: 600;
     width: 100%;
     text-align: center;
-    margin: 0.25em 0.5em;
+    margin: 0.25em 0;
 }
 
 .footer{
@@ -133,3 +136,12 @@ img{
     background-size: cover;
     background-position: bottom;
 }
+
+
+/*
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
