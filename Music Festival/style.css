@@ -38,7 +38,7 @@ body{
 .hero-header>.heading{
     font-size: 50px;
     line-height: 50px;
-    font-weight: 700;
+    font-weight: 900;
     color: white;
     margin: 0.1em 0px;
 }
@@ -84,10 +84,12 @@ body{
     justify-content: space-between;
     text-align: center;
     padding: 1em 1em;
-    background-image: url(Ticket2.jpg);
+    background-image: url(ticket2.jpg);
     background-size: cover;
     color: white;
+    transition: background-size 0.3s;
 }
+
 
 .card-head{
     font-size: 22px;
@@ -109,6 +111,9 @@ body{
     margin: 1em 0;
     cursor: pointer;
 }
+
+
+
 
 .card-info-1{
     font-size: 12px;
@@ -172,14 +177,14 @@ body{
 /*    height: 50vh;*/
     margin: auto;
     padding: 10em 0;
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 
 .box-2{
     width: 50%;
 /*    height: 100%;*/
     float: right;    
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 
 .timeline-content{
@@ -248,7 +253,7 @@ body{
 }
 
 .grid-image{
-    background: white;
+    background: black;
 /*    border: 1px solid red;*/
     width: 33%;
     height: 33%;
@@ -259,7 +264,12 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;  
+    transition: transform 0.3s;
 /*    image-resolution: snap;*/
+}
+
+.grid-image>img{
+    opacity: 50%;
 }
     
 .gallery-section>.button{
@@ -273,15 +283,24 @@ img{
 
 
 .footer{
+/*    padding-top: 3em;*/
     height: 20vh;
     width: 100%;
     overflow: hidden;
 }
 
+.grid-image>img:hover{
+    transform: scale(1.3);
+    opacity: 100%;
+}
+
+
+
 
 
 
 @media   screen and (max-width: 600px){
+    
     .hero{
         height: 120vh;
     }
@@ -297,5 +316,13 @@ img{
     .grid-container{
         width: 100vw;
         height: 100vw
+    }
+    
+    .grid-image>img:hover{
+        transform: scale(1);
+    }
+    
+    .grid-image>img{
+        opacity: 100%;
     }
 }
