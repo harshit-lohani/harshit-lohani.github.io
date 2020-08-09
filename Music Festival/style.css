@@ -5,7 +5,7 @@ body{
 
 .hero{
 /*    background: black;*/
-    background-image: url(hero.jpg);
+    background-image: url(Hero.jpg);
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -84,7 +84,7 @@ body{
     justify-content: space-between;
     text-align: center;
     padding: 1em 1em;
-    background-image: url(ticket2.jpg);
+    background-image: url(Ticket2.jpg);
     background-size: cover;
     color: white;
 }
