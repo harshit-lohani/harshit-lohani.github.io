@@ -282,6 +282,10 @@ img{
 
 
 @media   screen and (max-width: 600px){
+    .hero{
+        height: 120vh;
+    }
+    
     .box-2{
         width: 100%;
     }
