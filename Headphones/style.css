@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper{
+    font-family: 'Monsterrat', sans-serif;
+    font-family: 16px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    width: 100%;
+    background: black;
+}
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Placeholder.png);
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+.cta{
+    width: 20%;
+/*    height: 32px;*/
+    padding: 0.5em 1.5em;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    margin: 4em 0;
+/*    margin: 4em 4em;*/
+}
+
+.empty{
+    width: 20%;
+}
+
+.section-2{
+    width: 100%;
+    height: 75vh;
+    background-image: url(Placeholder-2.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.header{
+    font-size: 2rem;
+    margin: 0.2em;
+}
+
+.subheader{
+    font-size: 0.75rem;
+    margin: 0.2em;
+}
+
+.white{
+    color: white;
+}
+
+.grey{
+    color: rgb(100, 100, 100);
+}
+
+.blue{
+    color: blue;
+}
+
+.section-3{
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    flex-flow: column wrap;
+    background: rgb(24, 24, 24);
+}
+
+.box1{
+    width: 65%;
+    height: 100%;
+}
+
+.box2{
+    width: 35%;
+    height: 100%;
+}
+.flex-display{
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+}
+
+
+.bg1{
+    background-image: url(Placeholder.png);
+    background-position: center;
+}
+
+img{  
+    width: inherit;  
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title{
+    font-size: 1.75rem;
+    font-weight: normal;
+    padding: 1em 0.5em;
+}
+
+.small{
+    font-size: 0.75rem;
+    line-height: 1.0rem;
+}
+
+.medium{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+.section-4{
+    height: 70vh;
+    background: rgb(24, 24, 24);
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.section-5
+{
+    height: 33vw;
+    width: 100%;
+    background: grey;
+}
+
+.carousel{
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: blue;
+}
+
+.image-carousel{
+    background: red;
+    width: 33vw;
+    height: 100%;
+}
+
+.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: grb(16, 16, 16);
+    color: white;
+    text-align: center;
+}
