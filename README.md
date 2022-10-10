@@ -1,6 +1,6 @@
 # harshit-lohani.github.io
 <html>
-This is where I try to make beautiful websites with the limited knowledge I have<br>
+This is where I try to make beautiful websites with css and js I have<br>
 Completed webpages:<br>
 https://harshit-lohani.github.io/Eduford/index.html<br>
 https://harshit-lohani.github.io/Music%20Festival/<br>
